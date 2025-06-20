@@ -12,9 +12,9 @@ const clerkWebhooks = async (req,res)=>{
         };
 
 
-        const payload = req.body.toString("utf8"); // ✅ RAW body as string
-        const evt = wh.verify(payload, headers); // ✅ verify
-        const { data, type } = evt;
+        await whook.verify(JSON.stringify(req.body), headers)
+
+        const {data,type} = req.body
 
         const userData = {
             _id:data.id,
