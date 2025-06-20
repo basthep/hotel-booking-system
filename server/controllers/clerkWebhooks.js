@@ -3,7 +3,6 @@ import {Webhook} from "svix"
 
 const clerkWebhooks = async (req,res)=>{
     try {
-        console.log("hit");
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
         const headers = {
