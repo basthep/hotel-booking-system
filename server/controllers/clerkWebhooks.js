@@ -2,6 +2,7 @@ import User from"../models/User.js";
 import {Webhook} from "svix"
 
 const clerkWebhooks = async (req,res)=>{
+       console.log("hit the api"); 
     try {
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
